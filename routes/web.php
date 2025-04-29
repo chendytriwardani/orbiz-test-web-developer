@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('/books/dataTable', [BooksController::class, 'dataTable']);
 
 
-Route::get('/books', [BooksController::class, 'index'])->name('books.index');
+Route::get('/', [BooksController::class, 'index'])->name('books.index');
 Route::resource('/books', BooksController::class)->except(['create', 'edit']);
 Route::get('/books/api', [BooksController::class, 'fetchFromGoogleBooks']);
 
